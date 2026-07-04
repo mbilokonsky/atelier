@@ -1,0 +1,9 @@
+projects/*/out/
+report/report.html
+__pycache__/
+
+# packaging
+*.egg-info/
+dist/
+build/
+.venv/
