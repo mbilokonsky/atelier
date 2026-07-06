@@ -20,7 +20,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from sdflib import Scene, render as sdf_render, sd_plane_y
+try:
+    from .sdflib import Scene, render as sdf_render, sd_plane_y
+except ImportError:  # scene scripts import `stage` with core/ on sys.path, not as a package
+    from sdflib import Scene, render as sdf_render, sd_plane_y
 
 F = np.float32
 

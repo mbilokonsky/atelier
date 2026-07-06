@@ -1,5 +1,5 @@
 {
-  "_readme": "External tool dependencies. Nothing under tools/vendor/ except this manifest, bootstrap.py, and .gitignore is committed — installs live in gitignored subdirectories. Resolve or install via: python tools/vendor/bootstrap.py <name> [--install]",
+  "_readme": "External tool dependencies. Nothing under vendor/ except this manifest, bootstrap.py, and .gitignore is committed — installs live in gitignored subdirectories. Resolve or install via: python vendor/bootstrap.py <name> [--install]",
   "blender": {
     "version": "4.5.11",
     "purpose": "atelier 3D backend — sculpt (metaballs/mesh), stage (constraints), frame (camera), G-buffer (passes/Cryptomatte/AOVs). Driven headless: blender --background --python <script>",
@@ -20,5 +20,15 @@
     },
     "install_dir": "mpfb_scripts/addons/mpfb",
     "_note": "loaded by scene scripts via bpy script_directories + addon_utils.enable('mpfb'); extension_path_user is patched to a vendored userhome (see projects/byrne/mpfb_probe.py)"
+  },
+  "mh_assets": {
+    "version": "system-cc0",
+    "purpose": "MakeHuman community system asset pack (CC0) — the wardrobe: clothes, hair, skins, eyes, eyebrows, teeth, proxymeshes. Consumed by MPFB figures (projects/byrne/mpfb_body.py resolves vendor/mh_assets).",
+    "windows-x64": {
+      "url": "http://files.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+      "unzips_to": ".",
+      "exe": "packs/makehuman_system_assets.json"
+    },
+    "install_dir": "mh_assets"
   }
 }

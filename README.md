@@ -30,6 +30,7 @@ checkout — heavyweight tools vendor themselves into gitignored directories, ne
 git clone https://github.com/mbilokonsky/atelier && cd atelier
 python vendor/bootstrap.py blender --install     # Blender 4.5 LTS (headless backend)
 python vendor/bootstrap.py mpfb --install        # MakeHuman-in-Blender (parametric bodies)
+python vendor/bootstrap.py mh_assets --install   # the CC0 wardrobe (clothes, hair, skins)
 atelier render projects/byrne/minors.py projects/byrne/out/structures3 structures3
 atelier paint projects/byrne/out/structures3/card.png projects/byrne/out/structures3/aux.npz \
         blueprint out.png 11 edge=0.75 order=0.65

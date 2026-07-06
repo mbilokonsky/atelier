@@ -1,6 +1,6 @@
 # The Sighted Hand — principles for representational illustration by code
 
-Distilled from the July 2026 spike (`tools/atelier/`) so that any model — including
+Distilled from the July 2026 spike (now this repository) so that any model — including
 ones weaker than the one that ran it — can reproduce the results by following the process
 rather than by being clever. Everything here was learned by doing and verified by eye.
 

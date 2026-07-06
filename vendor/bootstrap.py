@@ -1,8 +1,8 @@
 """Resolve (or install) external tool dependencies declared in manifest.json.
 
 Usage:
-    python tools/vendor/bootstrap.py blender            # resolve: print exe path, exit 0
-    python tools/vendor/bootstrap.py blender --install  # download + unzip into tools/vendor/ if missing
+    python vendor/bootstrap.py blender            # resolve: print exe path, exit 0
+    python vendor/bootstrap.py blender --install  # download + unzip into vendor/ if missing
 
 Resolution order: vendored install → system PATH. Nothing is downloaded without --install.
 Installs land in gitignored subdirectories next to this file; the repo carries only the
@@ -46,7 +46,7 @@ def resolve(name, install=False):
     dest.mkdir(parents=True, exist_ok=True)
     zip_path = dest / "download.zip"
     print(f"downloading {plat['url']} ...", file=sys.stderr)
-    req = urllib.request.Request(plat["url"], headers={"User-Agent": "generative-arcana-bootstrap/1.0"})
+    req = urllib.request.Request(plat["url"], headers={"User-Agent": "atelier-bootstrap/1.0"})
     with urllib.request.urlopen(req) as resp, open(zip_path, "wb") as out:
         total = int(resp.headers.get("Content-Length", 0))
         done = 0

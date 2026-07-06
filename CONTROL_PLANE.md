@@ -2,14 +2,14 @@
 
 The contract between the layers of the code-native illustration pipeline
 (`sculptor → stager → painter`). PRINCIPLES.md says *why*; this document says *what*: the data
-each layer owns, produces, and consumes. Reference implementation: `tools/atelier/`
+each layer owns, produces, and consumes. Reference implementation: this repository
 (`core/stage.py` · `core/styles.py` · `projects/fable/creatures.py`).
 
-> **Horizon note.** The atelier is becoming its own software project. The layer names here —
-> Sculptor, Stager, Framer, Painter — are on their way to being *interfaces*: the numpy-SDF
-> and Blender backends are already two implementations of the first three, and nothing in this
-> contract assumes either. When the atelier is extracted from generative-arcana, this document
-> is the seam it separates along.
+> **Horizon note.** The layer names here — Sculptor, Stager, Framer, Painter — are
+> *interfaces*: the numpy-SDF and Blender backends are already two implementations of the
+> first three, and nothing in this contract assumes either. This document is the seam the
+> atelier separated from generative-arcana along — and the seam any further backend
+> (three.js, game engines) plugs into.
 
 ## Layer contract
 
